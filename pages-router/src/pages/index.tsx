@@ -28,7 +28,7 @@ export default function Home() {
 
       <Box sx={{ marginTop: 4 }}>
         <Typography color="primary.light" variant="caption">
-          ※ これはApp Routerの画面です
+          ※ これはPages Routerの画面です
         </Typography>
       </Box>
     </>
