@@ -1,8 +1,7 @@
-import { TaskList } from '@/components/TaskList';
-import { Box, Button, Typography } from '@mui/material';
-import { Suspense } from 'react';
+import { AddTask } from '@/components/AddTask';
+import { Box, Typography } from '@mui/material';
 
-export default async function Home() {
+export default async function Page() {
   return (
     <Box component="main" sx={{ width: '600px', margin: '20px auto' }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -12,16 +11,11 @@ export default async function Home() {
           color="primary.dark"
           fontWeight={600}
         >
-          タスクリスト
+          タスクの追加
         </Typography>
-        <Button variant="contained" href="/add">
-          タスクを追加する
-        </Button>
       </Box>
-      <Suspense fallback={`loading...`}>
-        <TaskList />
-      </Suspense>
 
+      <AddTask />
       <Box sx={{ marginTop: 4 }}>
         <Typography color="primary.light" variant="caption">
           ※ これはApp Routerの画面です

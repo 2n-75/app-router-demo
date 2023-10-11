@@ -24,3 +24,8 @@ export async function GET(request: Request) {
   };
   return Response.json(res);
 }
+
+export async function POST(request: Request) {
+  // 登録が成功したと仮定した場合のレスポンスを返却する
+  return Response.json({ message: 'success' });
+}
