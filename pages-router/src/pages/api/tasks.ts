@@ -8,10 +8,15 @@ type TasksResponse = {
   }[];
 };
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<TasksResponse>
 ) {
+  // 登録が成功したと仮定した場合のレスポンスを返却する
+  if (req.method === 'POST') {
+    res.status(204);
+  }
+
   res.status(200).json({
     tasks: [
       {

@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import { Box, Button, Link, Typography } from '@mui/material';
-import { TaskList } from '@/components/TaskList';
+import { AddTask } from '@/components/AddTask';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+export default function Add() {
   return (
     <>
       <Head>
@@ -22,14 +22,11 @@ export default function Home() {
             color="primary.dark"
             fontWeight={600}
           >
-            タスクリスト
+            タスクの追加
           </Typography>
-          <Button variant="contained" href="/add">
-            タスクを追加する
-          </Button>
         </Box>
 
-        <TaskList />
+        <AddTask />
         <Box sx={{ marginTop: 4 }}>
           <Typography color="primary.light" variant="caption">
             ※ これはPages Routerの画面です
