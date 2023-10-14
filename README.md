@@ -2,8 +2,6 @@
 
 app router と pages router の違いを理解するために同じ画面を 2 つの方法で実装しました。
 
-【注意】Server Actionsのコードイメージのために作成したコードのため実際のデータの更新はできません
-
 ## 実装されている画面
 
 - タスク一覧画面 [http://localhost:3000](http://localhost:3000)
