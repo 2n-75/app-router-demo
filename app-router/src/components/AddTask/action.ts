@@ -1,5 +1,6 @@
 'use server';
 
+import { revalidateTag } from 'next/cache';
 import { Task } from '.';
 
 export const addTask = async (data: FormData) => {
@@ -9,11 +10,12 @@ export const addTask = async (data: FormData) => {
     name: data.get('name') as Task['name'],
     type: data.get('type') as Task['type'],
   };
-  console.log({ request });
   const res = await fetch('http://localhost:3000/api/tasks', {
     method: 'POST',
     body: JSON.stringify(request),
   });
+
+  revalidateTag("getTasks")
 
   return await res.json();
 };

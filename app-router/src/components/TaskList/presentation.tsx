@@ -7,12 +7,11 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import HomeIcon from '@mui/icons-material/Home';
 import WorkIcon from '@mui/icons-material/Work';
+import { DeleteTask } from '../DeleteTask';
+import { TasksResponse } from '@/app/api/tasks/route';
 
 export type Props = {
-  list: {
-    type: 'private' | 'work';
-    name: string;
-  }[];
+  list: TasksResponse['tasks'];
 };
 
 export const Presentation = ({ list }: Props) => {
@@ -27,6 +26,7 @@ export const Presentation = ({ list }: Props) => {
               </Avatar>
             </ListItemAvatar>
             <ListItemText primary={item.name} />
+            <DeleteTask id={item.id} />
           </ListItem>
         ))}
       </List>

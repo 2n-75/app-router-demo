@@ -2,8 +2,11 @@ import { TasksResponse } from '@/app/api/tasks/route';
 import { Presentation } from './presentation';
 
 const getTasks = async () => {
-  console.log('Aaaa');
-  const res = await fetch('http://localhost:3000/api/tasks');
+  const res = await fetch('http://localhost:3000/api/tasks', {
+    next: {
+      tags: ['getTasks'],
+    },
+  });
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
     console.log('failed to fetch');
