@@ -62,7 +62,9 @@ App Router の場合
 ### 呼び出し方
 
 ①`<form>`タグの `action` props を使う
+
 ② `<form>`タグの中の`<button>`, `<input type='submit'>` の `formAction` props を使う
+
 ③ 【Client Component で使う方法】`startTransision` を使う
 
 ### まずはこれをやってみよう！
